@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "spinup"
+version = "0.1.0"
+description = ""
+authors = ["d61h6k4 <ddbihbka@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+tensorflow-macos = "2.9"
+tensorflow-metal = "0.5.1"
+numpy = "^1.24.1"
+gymnasium = {extras = ["atari", "classic-control"], version = "^0.27.1"}
+tensorflow-probability = "0.17"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
