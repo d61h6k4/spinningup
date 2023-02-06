@@ -35,7 +35,7 @@ def train(env_name='CartPole-v1', hidden_sizes=[32], lr=1e-2,
     n_acts = env.action_space.n
     print(f"{obs_dim=}, {n_acts=}")
     # make core of policy network
-    logits_net = mlp(sizes=[obs_dim] + hidden_sizes + [n_acts])
+    logits_net = mlp(sizes=[obs_dim] + hidden_sizes + [n_acts], activation=tf.keras.activations.gelu)
 
     # make function to compute action distribution
     def get_policy(obs):
